@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Academia TSF | Certificación Internacional</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Configuración de colores -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1e3a8a",
+              secondary: "#f5c76a",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="font-sans text-gray-800 bg-gray-100">
+    <header class="bg-white shadow">
+      <div
+        class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <div class="flex items-center gap-2">
+          <img
+            src="/assets/img/tsfLogoMundo.png"
+            alt="Logo Talento Sin Fronteras"
+            class="h-20 w-auto"
+          />
+          <span class="font-bold text-lg">Talento Sin Fronteras</span>
+        </div>
+
+        <nav class="hidden md:flex gap-8 text-sm font-medium">
+          <a
+            data-i18n="nav_home"
+            href="../index.html"
+            class="hover:text-blue-600"
+            >Inicio</a
+          >
+          <a
+            data-i18n="nav_academy"
+            href="academiatsf.html"
+            class="hover:text-blue-600"
+            >Academias TSF</a
+          >
+          <a
+            data-i18n="nav_workers"
+            href="trabajadoresForm.html"
+            class="hover:text-blue-600"
+            >Para Trabajadores</a
+          >
+          <a
+            data-i18n="nav_employers"
+            href="empresasForm.html"
+            class="hover:text-blue-600"
+            >Para Empresas</a
+          >
+        </nav>
+
+        <a
+          data-i18n="btn_info"
+          href="https://wa.me/50255705760"
+          class="bg-yellow-500 text-black px-4 py-2 rounded-lg text-sm font-semibold hover:bg-yellow-400"
+        >
+          Solicitar Información
+        </a>
+        <div class="relative">
+          <button
+            id="langBtn"
+            class="flex items-center gap-2 px-4 py-2 border rounded-lg text-sm hover:bg-gray-100"
+          >
+            🌐 <span id="currentLang">ES</span>
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+
+          <div
+            id="langMenu"
+            class="absolute right-0 mt-2 w-36 bg-white border rounded-lg shadow-lg hidden z-10"
+          >
+            <button
+              onclick="changeLanguage('es')"
+              class="w-full px-4 py-2 text-left hover:bg-gray-100"
+            >
+              🇬🇹 Español
+            </button>
+            <button
+              onclick="changeLanguage('en')"
+              class="w-full px-4 py-2 text-left hover:bg-gray-100"
+            >
+              🇺🇸 English
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="bg-gradient-to-r from-primary to-blue-700 text-white py-20">
+      <div
+        class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center"
+      >
+        <div>
+          <h1 data-i18n="academy_hero_title" class="text-4xl font-bold mb-4">
+            Certificación Internacional de Competencias Laborales
+          </h1>
+          <p class="text-lg text-blue-100" data-i18n="academy_hero_subtitle">
+            Formación y certificación privada orientada a la empleabilidad
+            internacional.
+          </p>
+        </div>
+
+        <img
+          src="/assets/img/academia-hero.jpg"
+          alt="Academia TSF"
+          class="rounded-xl shadow-lg"
+        />
+      </div>
+    </section>
+
+    <!-- PARA EMPLEADORES -->
+    <section class="py-20">
+      <div
+        class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
+      >
+        <img
+          src="/assets/img/empleadores.jpg"
+          class="rounded-xl shadow-lg"
+          alt="Empleadores"
+        />
+
+        <div>
+          <span
+            class="text-primary font-semibold text-sm"
+            data-i18n="for_employers_badge"
+            >Para empleadores</span
+          >
+          <h2
+            class="text-3xl font-bold mt-2 mb-4"
+            data-i18n="for_employers_title"
+          >
+            Trabajadores certificados y validados
+          </h2>
+
+          <p class="mb-4" data-i18n="for_employers_text">
+            En <strong>Talento Sin Fronteras GT</strong> ofrecemos Certificación
+            Privada de Competencias Laborales, orientada a la preparación de
+            trabajadores para el empleo internacional.
+          </p>
+
+          <ul class="space-y-2 list-disc list-inside text-gray-600">
+            <li data-i18n="for_employers_list1">
+              Evaluación de competencias técnicas y prácticas
+            </li>
+            <li data-i18n="for_employers_list2">
+              Capacitación en seguridad y cultura laboral internacional
+            </li>
+            <li data-i18n="for_employers_list3">
+              Preparación para adaptación en entornos laborales extranjeros
+            </li>
+          </ul>
+
+          <div class="mt-6 bg-blue-50 p-4 rounded-lg">
+            <p class="font-semibold mb-2" data-i18n="cert_includes_title">
+              Los certificados incluyen:
+            </p>
+            <ul class="list-disc list-inside text-sm text-gray-700">
+              <li data-i18n="cert_includes_item1">Programa cursado</li>
+              <li data-i18n="cert_includes_item2">
+                Evaluación de competencias
+              </li>
+              <li data-i18n="cert_includes_item3">
+                Número de registro interno verificable
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARA TRABAJADORES -->
+    <section class="bg-gray-100 py-20">
+      <div
+        class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
+      >
+        <div>
+          <span
+            data-i18n="for_workers_badge"
+            class="text-primary font-semibold text-sm"
+            >Para trabajadores</span
+          >
+          <h2
+            data-i18n="for_workers_title"
+            class="text-3xl font-bold mt-2 mb-4"
+          >
+            Certifícate para trabajar en el extranjero
+          </h2>
+
+          <p class="mb-4" data-i18n="for_workers_text">
+            Nuestros programas están dirigidos a personas que desean mejorar sus
+            oportunidades laborales internacionales, demostrando competencias
+            reales y verificables.
+          </p>
+
+          <ul class="space-y-2 list-disc list-inside text-gray-600">
+            <li data-i18n="for_workers_list1">
+              Validación de habilidades prácticas
+            </li>
+            <li data-i18n="for_workers_list2">
+              Preparación bajo estándares internacionales
+            </li>
+            <li data-i18n="for_workers_list3">
+              Certificado de Competencias Laborales Internacionales
+            </li>
+            <li data-i18n="for_workers_list4">
+              Prioridad en procesos de reclutamiento
+            </li>
+          </ul>
+        </div>
+
+        <img
+          src="/assets/img/trabajadores.jpg"
+          class="rounded-xl shadow-lg"
+          alt="Trabajadores"
+        />
+      </div>
+    </section>
+
+    <!-- PROGRAMAS -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2
+          class="text-3xl font-bold text-center mb-12"
+          data-i18n="programs_section_title"
+        >
+          Programas de Certificación
+        </h2>
+
+        <div class="space-y-4">
+          <!-- PROGRAMA -->
+          <details class="bg-white rounded-xl shadow p-6">
+            <summary
+              class="font-semibold text-lg cursor-pointer"
+              data-i18n="prog_lang_title"
+            >
+              🌍 Idiomas Laborales para Trabajo Internacional
+            </summary>
+            <p class="mt-3 text-gray-600" data-i18n="prog_lang_desc">
+              Comunicación práctica para desempeñarse eficazmente en entornos
+              laborales internacionales (español, inglés, francés, portugués,
+              croata y más).
+            </p>
+            <a
+              data-i18n="whatsapp_btn"
+              href="https://wa.me/50200000000?text=Quiero%20información%20sobre%20Idiomas%20Laborales"
+              class="inline-block mt-4 bg-primary text-white px-6 py-2 rounded-lg hover:bg-blue-800"
+            >
+              Consultar por WhatsApp
+            </a>
+          </details>
+
+          <details class="bg-white rounded-xl shadow p-6">
+            <summary
+              data-i18n="prog_const_title"
+              class="font-semibold text-lg cursor-pointer"
+            >
+              🏗 Operario Internacional en Construcción y Oficios
+            </summary>
+            <p class="mt-3 text-gray-600" data-i18n="prog_const_desc">
+              Formación técnica integral en construcción, oficios y seguridad
+              bajo estándares internacionales.
+            </p>
+            <a
+              data-i18n="whatsapp_btn"
+              href="https://wa.me/50200000000?text=Información%20sobre%20Construcción%20Internacional"
+              class="inline-block mt-4 bg-primary text-white px-6 py-2 rounded-lg"
+            >
+              Consultar por WhatsApp
+            </a>
+          </details>
+
+          <details class="bg-white rounded-xl shadow p-6">
+            <summary
+              class="font-semibold text-lg cursor-pointer"
+              data-i18n="prog_ind_title"
+            >
+              🏭 Operario Internacional Industrial y de Producción
+            </summary>
+            <p class="mt-3 text-gray-600" data-i18n="prog_ind_desc">
+              Capacitación para fábricas y plantas industriales con enfoque en
+              calidad y seguridad laboral.
+            </p>
+            <a
+              data-i18n="whatsapp_btn"
+              href="https://wa.me/50200000000?text=Información%20Industria%20y%20Producción"
+              class="inline-block mt-4 bg-primary text-white px-6 py-2 rounded-lg"
+            >
+              Consultar por WhatsApp
+            </a>
+          </details>
+
+          <details class="bg-white rounded-xl shadow p-6">
+            <summary
+              class="font-semibold text-lg cursor-pointer"
+              data-i18n="prog_food_title"
+            >
+              🍽 Operario Internacional en Industria Alimentaria
+            </summary>
+            <p class="mt-3 text-gray-600" data-i18n="prog_food_desc">
+              Preparación en procesamiento, empaque y manipulación de alimentos
+              bajo normas internacionales.
+            </p>
+            <a
+              data-i18n="whatsapp_btn"
+              href="https://wa.me/50200000000?text=Información%20Industria%20Alimentaria"
+              class="inline-block mt-4 bg-primary text-white px-6 py-2 rounded-lg"
+            >
+              Consultar por WhatsApp
+            </a>
+          </details>
+
+          <details class="bg-white rounded-xl shadow p-6">
+            <summary
+              class="font-semibold text-lg cursor-pointer"
+              data-i18n="prog_hotel_title"
+            >
+              🏨 Hotelería y Servicios Internacionales
+            </summary>
+            <p class="mt-3 text-gray-600" data-i18n="prog_hotel_desc">
+              Formación para hoteles, restaurantes y servicios generales con
+              estándares internacionales.
+            </p>
+            <a
+              data-i18n="whatsapp_btn"
+              href="https://wa.me/50200000000?text=Información%20Hotelería"
+              class="inline-block mt-4 bg-primary text-white px-6 py-2 rounded-lg"
+            >
+              Consultar por WhatsApp
+            </a>
+          </details>
+
+          <details class="bg-white rounded-xl shadow p-6">
+            <summary
+              class="font-semibold text-lg cursor-pointer"
+              data-i18n="prog_agri_title"
+            >
+              🌱 Agricultura y Trabajos Temporales
+            </summary>
+            <p class="mt-3 text-gray-600" data-i18n="prog_agri_desc">
+              Capacitación práctica para trabajos agrícolas y empleos temporales
+              internacionales.
+            </p>
+            <a
+              data-i18n="whatsapp_btn"
+              href="https://wa.me/50200000000?text=Información%20Agricultura"
+              class="inline-block mt-4 bg-primary text-white px-6 py-2 rounded-lg"
+            >
+              Consultar por WhatsApp
+            </a>
+          </details>
+
+          <details class="bg-white rounded-xl shadow p-6">
+            <summary
+              class="font-semibold text-lg cursor-pointer"
+              data-i18n="prog_safety_title"
+            >
+              🛡 Seguridad y Preparación Laboral Internacional
+            </summary>
+            <p class="mt-3 text-gray-600" data-i18n="prog_safety_desc">
+              Formación obligatoria en seguridad, cultura laboral y adaptación
+              internacional.
+            </p>
+            <a
+              data-i18n="whatsapp_btn"
+              href="https://wa.me/50200000000?text=Información%20Seguridad%20Laboral"
+              class="inline-block mt-4 bg-primary text-white px-6 py-2 rounded-lg"
+            >
+              Consultar por WhatsApp
+            </a>
+          </details>
+
+          <details class="bg-white rounded-xl shadow p-6">
+            <summary
+              class="font-semibold text-lg cursor-pointer"
+              data-i18n="prog_super_title"
+            >
+              👷 Supervisor Técnico Internacional
+            </summary>
+            <p class="mt-3 text-gray-600" data-i18n="prog_super_desc">
+              Formación avanzada en liderazgo, coordinación de equipos y control
+              técnico.
+            </p>
+            <a
+              data-i18n="whatsapp_btn"
+              href="https://wa.me/50200000000?text=Información%20Supervisor%20Técnico"
+              class="inline-block mt-4 bg-primary text-white px-6 py-2 rounded-lg"
+            >
+              Consultar por WhatsApp
+            </a>
+          </details>
+        </div>
+
+        <!-- MENSAJE ABIERTO -->
+        <div class="mt-12 bg-blue-50 p-6 rounded-xl text-center">
+          <p class="font-semibold" data-i18n="custom_prog_title">
+            Nuestros programas no están limitados a esta lista.
+          </p>
+          <p class="text-sm text-gray-600 mt-2" data-i18n="custom_prog_desc">
+            Podemos desarrollar certificaciones y capacitaciones personalizadas
+            según las necesidades de empleadores y trabajadores.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script src="../assets/js/translation.js"></script>
+    <script src="../assets/js/lang.js" defer></script>
+  </body>
+</html>

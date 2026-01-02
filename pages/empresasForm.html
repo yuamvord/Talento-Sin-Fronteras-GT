@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employer Collaboration Form | Talento Sin Fronteras GT</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1e40af",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-gray-100 text-gray-800">
+    <!-- HEADER (idéntico) -->
+    <header class="bg-white shadow">
+      <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+          <img
+            src="/assets/img/tsfLogoMundo.png"
+            alt="Logo Talento Sin Fronteras"
+            class="h-20 w-auto"
+          />
+          <span class="font-bold text-lg">Talento Sin Fronteras</span>
+        </div>
+
+        <nav class="hidden md:flex gap-8 text-sm font-medium">
+          <a href="../index.html" class="hover:text-blue-600" data-i18n="nav_home">Inicio</a>
+          <a href="academiatsf.html" class="hover:text-blue-600" data-i18n="nav_academy">Academia TSF</a>
+          <a href="trabajadoresForm.html" class="hover:text-blue-600" data-i18n="nav_workers">Para Trabajadores</a>
+          <a href="empresasForm.html" class="hover:text-blue-600" data-i18n="nav_employers">Para Empresas</a>
+        </nav>
+
+        <a data-i18n="btn_info"
+          href="https://wa.me/50255705760"
+          class="bg-yellow-500 text-black px-4 py-2 rounded-lg text-sm font-semibold hover:bg-yellow-400"
+        >
+          Solicitar Información
+        </a>
+                <div class="relative">
+          <button
+            id="langBtn"
+            class="flex items-center gap-2 px-4 py-2 border rounded-lg text-sm hover:bg-gray-100"
+          >
+            🌐 <span id="currentLang">ES</span>
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+
+          <div
+            id="langMenu"
+            class="absolute right-0 mt-2 w-36 bg-white border rounded-lg shadow-lg hidden z-10"
+          >
+            <button
+              onclick="changeLanguage('es')"
+              class="w-full px-4 py-2 text-left hover:bg-gray-100"
+            >
+              🇬🇹 Español
+            </button>
+            <button
+              onclick="changeLanguage('en')"
+              class="w-full px-4 py-2 text-left hover:bg-gray-100"
+            >
+              🇺🇸 English
+            </button>
+          </div>
+        </div>
+        
+      </div>
+    </header>
+
+    <!-- FORMULARIO -->
+    <section class="py-16">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="bg-white rounded-2xl shadow-lg p-10">
+          <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold">
+              Employer Collaboration Form
+            </h2>
+            <p class="text-gray-600 mt-2">
+              Estimated completion time: 3–5 minutes
+            </p>
+          </div>
+
+          <!-- FORM -->
+          <form
+            action="https://submit.jotform.com/submit/XXXXXXXXXXXX/"
+            method="POST"
+            enctype="multipart/form-data"
+            class="grid md:grid-cols-2 gap-6"
+          >
+            <!-- COMPANY INFORMATION -->
+            <h3 class="md:col-span-2 font-semibold text-lg text-primary">
+              Company Information
+            </h3>
+
+            <input type="text" name="company_name" placeholder="Legal company name" required class="input" />
+            <input type="text" name="country" placeholder="Country" required class="input" />
+            <input type="text" name="region" placeholder="State / Province / Region" required class="input" />
+
+            <select name="industry" required class="input">
+              <option value="">Industry / Sector</option>
+              <option>Agriculture</option>
+              <option>Cleaning</option>
+              <option>Construction</option>
+              <option>Hospitality</option>
+              <option>Food Processing</option>
+              <option>Transportation</option>
+              <option>Other</option>
+            </select>
+
+            <input
+              type="url"
+              name="company_website"
+              placeholder="Company website or LinkedIn profile"
+              required
+              class="md:col-span-2 input"
+            />
+
+            <!-- CONTACT PERSON -->
+            <h3 class="md:col-span-2 font-semibold text-lg text-primary mt-6">
+              Contact Person
+            </h3>
+
+            <input type="text" name="contact_name" placeholder="Full name" required class="input" />
+            <input type="text" name="job_title" placeholder="Job title / position" required class="input" />
+            <input type="email" name="email" placeholder="Corporate email address" required class="input" />
+            <input type="text" name="phone" placeholder="Phone number / WhatsApp" required class="input" />
+
+            <select name="preferred_language" required class="input">
+              <option value="">Preferred language</option>
+              <option>English</option>
+              <option>Spanish</option>
+              <option>French</option>
+            </select>
+
+            <!-- WORKFORCE NEEDS -->
+            <h3 class="md:col-span-2 font-semibold text-lg text-primary mt-6">
+              Workforce Needs
+            </h3>
+
+            <select name="worker_type" required class="input">
+              <option value="">Type of workers needed</option>
+              <option>Agriculture</option>
+              <option>Cleaning</option>
+              <option>Construction</option>
+              <option>Hospitality</option>
+              <option>Food Processing</option>
+              <option>Transportation</option>
+              <option>Other</option>
+            </select>
+
+            <input type="number" name="worker_quantity" placeholder="Number of workers required (estimate)" required class="input" />
+            <input type="text" name="work_country" placeholder="Country where the work will take place" required class="input" />
+            <input type="date" name="start_date" required class="input" />
+
+            <select name="contract_duration" required class="input">
+              <option value="">Contract duration</option>
+              <option>Weeks</option>
+              <option>Months</option>
+            </select>
+
+            <!-- LEGAL STATUS -->
+            <h3 class="md:col-span-2 font-semibold text-lg text-primary mt-6">
+              Hiring & Legal Status
+            </h3>
+
+            <select name="foreign_workers_before" required class="input">
+              <option value="">Have you hired foreign workers before?</option>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+
+            <select name="legal_status" required class="md:col-span-2 input">
+              <option value="">Current hiring or legal process status</option>
+              <option>We already have a work permit / visa / LMIA</option>
+              <option>We are starting the process</option>
+              <option>We need guidance on the legal process</option>
+              <option>Not sure yet</option>
+            </select>
+
+            <!-- ACADEMY MESSAGE (VISIBLE EN JOTFORM POR PASO) -->
+            <div class="md:col-span-2 bg-blue-50 border border-blue-200 rounded-lg p-4 text-sm text-blue-900">
+              <strong>Talento Sin Fronteras Academy</strong><br />
+              We provide job-specific and language training aligned with international labor standards,
+              ensuring workers arrive prepared and productive from day one.
+            </div>
+
+            <!-- TRAINING -->
+            <select name="training_required" required class="input">
+              <option value="">Would you require training services?</option>
+              <option>Yes</option>
+              <option>No</option>
+              <option>Not sure yet</option>
+            </select>
+
+            <select name="language_training" class="input">
+              <option value="">Language training needed</option>
+              <option>English</option>
+              <option>French</option>
+              <option>Spanish</option>
+              <option>Not required</option>
+            </select>
+
+            <textarea
+              name="additional_requirements"
+              rows="4"
+              class="md:col-span-2 input"
+              placeholder="Additional training or language requirements (optional)"
+            ></textarea>
+
+            <!-- FILES -->
+            <h3 class="md:col-span-2 font-semibold text-lg text-primary mt-6">
+              Documents
+            </h3>
+
+            <input type="file" name="job_description" required class="md:col-span-2 input" />
+            <input type="file" name="optional_documents" multiple class="md:col-span-2 input" />
+
+            <!-- COMMENTS -->
+            <textarea
+              name="comments"
+              rows="4"
+              class="md:col-span-2 input"
+              placeholder="Additional comments or information (optional)"
+            ></textarea>
+
+            <!-- CONFIRMATION -->
+            <label class="md:col-span-2 flex gap-2 items-start text-sm">
+              <input type="checkbox" required />
+              I confirm that the information provided is accurate and authorize
+              Talento Sin Fronteras GT to contact me.
+            </label>
+
+            <!-- SUBMIT -->
+            <div class="md:col-span-2 text-center mt-8">
+              <button
+                type="submit"
+                class="bg-primary text-white px-12 py-3 rounded-lg font-semibold hover:bg-blue-800 transition"
+              >
+                Submit Information
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- INPUT STYLE -->
+    <style>
+      .input {
+        width: 100%;
+        border: 1px solid #d1d5db;
+        border-radius: 0.5rem;
+        padding: 0.75rem 1rem;
+        outline: none;
+      }
+      .input:focus {
+        border-color: #1e40af;
+        box-shadow: 0 0 0 2px rgba(30, 64, 175, 0.2);
+      }
+    </style>
+
+    
+    <script src="../assets/js/translation.js"></script>
+    <script src="../assets/js/lang.js" defer></script>
+  </body>
+</html>

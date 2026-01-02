@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Talento Sin Fronteras</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="font-sans text-gray-800 bg-gray-100">
+  <header class="bg-white shadow">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <img src="/assets/img/tsfLogoMundo.png" alt="Logo Talento Sin Fronteras" class="h-20 w-auto" />
+        <span class="font-bold text-lg">Talento Sin Fronteras</span>
+      </div>
+
+      <nav class="hidden md:flex gap-8 text-sm font-medium">
+        <a href="#nosotros" class="hover:text-blue-600" data-i18n="nav_why">¿Por qué elegirnos?</a>
+        <a href="/pages/academiatsf.html" class="hover:text-blue-600" data-i18n="nav_academy">Academias TSF</a>
+        <a href="/pages/trabajadoresForm.html" class="hover:text-blue-600" data-i18n="nav_workers">Para Trabajadores</a>
+        <a href="/pages/empresasForm.html" class="hover:text-blue-600" data-i18n="nav_employers">Para Empresas</a>
+      </nav>
+
+      <a href="https://wa.me/50255705760"
+        class="bg-yellow-500 text-black px-4 py-2 rounded-lg text-sm font-semibold hover:bg-yellow-400" data-i18n="btn_info">
+        Solicitar Información
+      </a>
+      <div class="relative">
+        <button id="langBtn" class="flex items-center gap-2 px-4 py-2 border rounded-lg text-sm hover:bg-gray-100">
+          🌐 <span id="currentLang">ES</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        <div id="langMenu" class="absolute right-0 mt-2 w-36 bg-white border rounded-lg shadow-lg hidden z-10">
+          <button onclick="changeLanguage('es')" class="w-full px-4 py-2 text-left hover:bg-gray-100">
+            🇬🇹 Español
+          </button>
+          <button onclick="changeLanguage('en')" class="w-full px-4 py-2 text-left hover:bg-gray-100">
+            🇺🇸 English
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </header>
+
+  <section class="relative overflow-hidden bg-gradient-to-r from-blue-900 to-blue-700 text-white">
+    <img src="/assets/img/bannerHero.jpg" alt="Imagen Hero"
+      class="absolute inset-0 w-full h-full object-cover opacity-30" />
+
+    <div class="relative max-w-7xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <span class="inline-block bg-yellow-500 text-black text-xs px-3 py-1 rounded-full mb-4" data-i18n="hero_badge">
+          Movilidad Internacional
+        </span>
+
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6" data-i18n="hero_title">
+          Movilidad Laboral Responsable desde Guatemala hacia el Mundo
+        </h1>
+
+        <p class="text-sm md:text-base text-gray-200 mb-8" data-i18n="hero_subtitle">
+          Conectando talento guatemalteco con oportunidades laborales en el extranjero
+        </p>
+
+        <div class="flex flex-wrap gap-4">
+          <a data-i18n="btn_workers" href="/pages/trabajadoresForm.html"
+            class="bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400">
+            Para Trabajadores
+          </a>
+          <a data-i18n="btn_employers" href="/pages/empresasForm.html"
+            class="bg-white text-blue-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100">
+            Para Empresas
+          </a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4">
+        <div class="bg-white/10 backdrop-blur p-4 rounded-xl">
+          <img src="/assets/img/birrete.png" alt="Icono" class="h-11 mb-3" />
+          <h3 class="font-semibold" data-i18n="card_academy_title">Academia TSF</h3>
+          <p class="text-xs text-gray-200" data-i18n="card_academy_text">Formación integral para preparar a los candidatos en idioma, cultura laboral
+            y habilidades necesarias para trabajar en el extranjero.</p>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur p-4 rounded-xl">
+          <img src="/assets/img/subasta.png" alt="Icono" class="h-11 mb-3" />
+          <h3 class="font-semibold" data-i18n="card_legal_title">Asesoría Legal</h3>
+          <p class="text-xs text-gray-200" data-i18n="card_legal_text">Acompañamiento legal completo durante todo el proceso migratorio,
+            garantizando seguridad y cumplimiento normativo.</p>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur p-4 rounded-xl">
+          <img src="/assets/img/pasaporte.png" alt="Icono" class="h-11 mb-3" />
+          <h3 class="font-semibold" data-i18n="card_visa_title">Visas H2A / H2B</h3>
+          <p class="text-xs text-gray-200" data-i18n="card_visa_text">Gestión y orientación especializada en visas temporales de trabajo agrícola y
+            no agrícola.</p>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur p-4 rounded-xl">
+          <img src="/assets/img/gente.png" alt="Icono" class="h-11 mb-3" />
+          <h3 class="font-semibold" data-i18n="card_allies_title">Red de Aliados</h3>
+          <p class="text-xs text-gray-200" data-i18n="card_allies_text">Conexión con empresas, empleadores y organizaciones internacionales
+            confiables.</p>
+        </div>
+      </div>
+    </div>
+    <svg class="absolute -bottom-px left-0 w-full block" viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path
+        d="M0,64L80,74.7C160,85,320,107,480,101.3C640,96,800,64,960,58.7C1120,53,1280,75,1360,85.3L1440,96L1440,120L0,120Z"
+        fill="#f3f4f6" />
+    </svg>
+  </section>
+
+  <section id="nosotros" class="bg-gray-100 py-20">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <span class="text-blue-600 font-semibold text-sm" data-i18n="nav_why">¿Por qué elegirnos?</span>
+      <h2 data-i18n="ours_why" class="text-3xl font-bold mt-2 mb-12">Nuestros Diferenciadores</h2>
+
+      <div class="grid md:grid-cols-5 gap-6">
+        <div class="bg-white p-6 rounded-xl shadow text-left">
+          <div
+            class="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center mb-4">
+            <div
+              class="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M9 12l2 2 4-4"></path>
+                <path d="M12 22l-3-3h-4v-4l-3-3 3-3V6h4l3-3 3 3h4v4l3 3-3 3v4h-4l-3 3z"></path>
+              </svg>
+            </div>
+          </div>
+          <h3 class="font-semibold mb-2" data-i18n="why_cert_title">Certificación Oficial</h3>
+          <p class="text-sm text-gray-600" data-i18n="why_cert_text">Trabajamos con procesos avalados y aliados internacionales que garantizan
+            transparencia y legalidad.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow text-left">
+          <div
+            class="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center mb-4">
+            <div
+              class="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M12 8c-3.314 0-6 1.343-6 3s2.686 3 6 3 6-1.343 6-3-2.686-3-6-3z"></path>
+                <path d="M6 11v5c0 1.657 2.686 3 6 3s6-1.343 6-3v-5"></path>
+              </svg>
+            </div>
+          </div>
+          <h3 class="font-semibold mb-2" data-i18n="why_free_title">Sin Costo al Trabajador</h3>
+          <p class="text-sm text-gray-600" data-i18n="why_free_text">Nuestros programas no generan cobros indebidos ni intermediarios informales.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow text-left">
+          <div
+            class="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center mb-4">
+            <div
+              class="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                <path d="M12 14l6.16-3.422A12.083 12.083 0 0112 21.5a12.083 12.083 0 01-6.16-10.922L12 14z"></path>
+              </svg>
+            </div>
+          </div>
+          <h3 class="font-semibold mb-2" data-i18n="why_academy_title">Academia de Idiomas</h3>
+          <p class="text-sm text-gray-600" data-i18n="why_academy_text">Capacitación práctica enfocada en el idioma requerido para el trabajo y la
+            vida diaria.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow text-left">
+          <div
+            class="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center mb-4">
+            <div
+              class="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M12 3v18"></path>
+                <path d="M3 7h18"></path>
+                <path d="M7 7l5 10 5-10"></path>
+              </svg>
+            </div>
+          </div>
+          <h3 class="font-semibold mb-2" data-i18n="why_legal_title">Asesoría Legal</h3>
+          <p class="text-sm text-gray-600" data-i18n="why_legal_text">Acompañamiento profesional desde la aplicación hasta la llegada al país de
+            destino.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow text-left">
+          <div
+            class="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center mb-4">
+            <div
+              class="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M16 11c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3z"></path>
+                <path d="M8 11c1.657 0 3-1.343 3-3S9.657 5 8 5 5 6.343 5 8s1.343 3 3 3z"></path>
+                <path d="M2 21v-1c0-2.761 4-4 6-4"></path>
+                <path d="M22 21v-1c0-2.761-4-4-6-4"></path>
+              </svg>
+            </div>
+          </div>
+          <h3 class="font-semibold mb-2" data-i18n="why_support_title">Acompañamiento</h3>
+          <p class="text-sm text-gray-600" data-i18n="why_support_text">Seguimiento antes, durante y después del proceso para asegurar una
+            experiencia exitosa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gradient-to-r from-blue-900 to-blue-700 py-16 text-center text-white">
+    <h2 class="text-3xl font-bold mb-4" data-i18n="cta_title">
+      ¿Listo para dar el siguiente paso en tu carrera profesional?
+    </h2>
+    <p class="text-gray-200 mb-8" data-i18n="cta_subtitle">Solicita información con nosotros y cambia tu futuro</p>
+
+    <a data-i18n="cta_button" href="https://wa.me/50255705760"
+      class="inline-block bg-yellow-500 text-black px-8 py-4 rounded-lg font-semibold hover:bg-yellow-400">
+      Solicita Más Información
+    </a>
+  </section>
+
+  <section class="bg-gray-100 py-20">
+    <div class="max-w-7xl mx-auto px-4 space-y-24">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span data-i18n="programs_badge" class="inline-block bg-yellow-100 text-yellow-700 text-xs px-3 py-1 rounded-full mb-4">
+            Nuestros Programas
+          </span>
+
+          <h2 class="text-3xl font-bold mb-6" data-i18n="programs_title">
+            Oportunidades en
+            <span class="text-blue-700" data-i18n="programs_title_highlight">Múltiples Países</span>
+          </h2>
+
+          <p class="text-gray-600 mb-8 text-sm" data-i18n="programs_desc">
+            Brindamos oportunidades laborales seguras y legales en diferentes países, conectando talento guatemalteco
+            con empleadores internacionales confiables.
+          </p>
+
+          <ul class="space-y-4">
+            <li class="flex items-start gap-4 bg-white p-4 rounded-xl shadow-sm">
+              <img src="/assets/img/estrellas-fugaces.png" alt="Icono" class="h-12 w-12" />
+              <div>
+                <h4 class="font-semibold" data-i18n="usa_title">Estados Unidos (H2A / H2B)</h4>
+                <p class="text-sm text-gray-600" data-i18n="usa_desc">Programas temporales para trabajos agrícolas y no agrícolas con
+                  empleadores certificados.</p>
+              </div>
+            </li>
+
+            <li class="flex items-start gap-4 bg-white p-4 rounded-xl shadow-sm">
+              <img src="/assets/img/hoja-de-arce.png" alt="Icono" class="h-12 w-12" />
+              <div>
+                <h4 class="font-semibold" data-i18n="canada_title">Canadá (TWP)</h4>
+                <p class="text-sm text-gray-600" data-i18n="canada_desc">Oportunidades laborales con contratos formales y estándares laborales
+                  internacionales.</p>
+              </div>
+            </li>
+
+            <li class="flex items-start gap-4 bg-white p-4 rounded-xl shadow-sm">
+              <img src="/assets/img/direcciones.png" alt="Icono" class="h-12 w-12" />
+              <div>
+                <h4 class="font-semibold" data-i18n="europe_title">Europa (España, Polonia)</h4>
+                <p class="text-sm text-gray-600" data-i18n="europe_desc">Programas de empleo en sectores agrícolas, industriales y de servicios.
+                </p>
+              </div>
+            </li>
+
+            <li class="flex items-start gap-4 bg-white p-4 rounded-xl shadow-sm">
+              <img src="/assets/img/america-del-sur.png" alt="Icono" class="h-12 w-12" />
+              <div>
+                <h4 class="font-semibold" data-i18n="latam_title">México y Latinoamérica</h4>
+                <p class="text-sm text-gray-600" data-i18n="latam_desc">Opciones laborales regionales con procesos accesibles y acompañamiento
+                  continuo.</p>
+              </div>
+            </li>
+          </ul>
+
+          <a data-i18n="apply_button" href="https://wa.me/50255705760?text=Hola,%20quiero%20información%20de%20los%20requisitos"
+            class="inline-flex items-center gap-2 mt-8 bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400">
+            Solicitar Requisitos y Aplicar
+          </a>
+        </div>
+
+        <div class="space-y-6">
+          <div class="rounded-xl overflow-hidden shadow">
+            <img src="/assets/img/siembra.jpg" alt="Imagen principal de siembra" class="w-full h-56 object-cover" />
+          </div>
+
+          <div class="grid grid-cols-2 gap-6">
+            <div class="space-y-4">
+              <img src="/assets/img/juridico.jpg" alt="Imagen que representa que todo es legal"
+                class="w-full h-25 object-cover rounded-xl shadow" />
+              <img src="/assets/img/personaTrabajando.jpg" alt="Persona trabajando frente a la computadora"
+                class="w-full h-25 object-cover rounded-xl shadow" />
+            </div>
+
+            <div class="bg-white rounded-xl shadow p-6 grid grid-cols-3 text-center gap-4">
+              <div>
+                <p class="text-2xl font-bold text-blue-700">10+</p>
+                <p class="text-xs text-gray-600" data-i18n="stats_years">Años de Experiencia</p>
+              </div>
+              <div>
+                <p class="text-2xl font-bold text-blue-700">100%</p>
+                <p class="text-xs text-gray-600" data-i18n="stats_legal">Legal y Seguro</p>
+              </div>
+              <div>
+                <p class="text-2xl font-bold text-blue-700">0</p>
+                <p class="text-xs text-gray-600" data-i18n="stats_cost">Costo al Trabajador</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span data-i18n="academy_badge" class="inline-block bg-green-100 text-green-700 text-xs px-3 py-1 rounded-full mb-4">
+            TSF Academy
+          </span>
+
+          <h2 data-i18n="academy_title" class="text-3xl font-bold mb-4">
+            Academia de Idiomas <span class="text-blue-700">TSF</span>
+          </h2>
+
+          <p class="text-gray-600 mb-8 text-sm" data-i18n="academy_desc">
+            Nuestra academia prepara a los participantes para enfrentar con éxito su experiencia laboral en el
+            extranjero mediante formación lingüística y cultural.
+          </p>
+
+          <ul class="space-y-4">
+            <li class="flex items-start gap-4 bg-white p-4 rounded-xl shadow-sm">
+              <img src="/assets/img/traduccion.png" alt="Icono" class="h-12 w-12" />
+              <div>
+                <h4 class="font-semibold" data-i18n="academy_lang_title">Capacitación en Idiomas</h4>
+                <p class="text-sm text-gray-600" data-i18n="academy_lang_desc">Cursos prácticos enfocados en comunicación laboral real.</p>
+              </div>
+            </li>
+
+            <li class="flex items-start gap-4 bg-white p-4 rounded-xl shadow-sm">
+              <img src="/assets/img/hinduista.png" alt="Icono" class="h-12 w-12" />
+              <div>
+                <h4 class="font-semibold" data-i18n="academy_culture_title">Orientación Cultural</h4>
+                <p class="text-sm text-gray-600" data-i18n="academy_culture_desc">Preparación para adaptarse a nuevas culturas, normas y estilos de
+                  trabajo.</p>
+              </div>
+            </li>
+
+            <li class="flex items-start gap-4 bg-white p-4 rounded-xl shadow-sm">
+              <img src="/assets/img/prueba.png" alt="Icono" class="h-12 w-12" />
+              <div>
+                <h4 class="font-semibold" data-i18n="academy_test_title">Test de Nivel</h4>
+                <p class="text-sm text-gray-600" data-i18n="academy_test_desc">Evaluación inicial para ubicar al candidato en el nivel adecuado.</p>
+              </div>
+            </li>
+
+            <li class="flex items-start gap-4 bg-white p-4 rounded-xl shadow-sm">
+              <img src="/assets/img/vocabulario.png" alt="Icono" class="h-12 w-12" />
+              <div>
+                <h4 class="font-semibold" data-i18n="academy_vocab_title">Vocabulario Laboral</h4>
+                <p class="text-sm text-gray-600" data-i18n="academy_vocab_desc">Enfoque en términos técnicos y situaciones reales del trabajo.</p>
+              </div>
+            </li>
+          </ul>
+
+          <a data-i18n="academy_button" href="/pages/academiatsf.html"
+            class="inline-flex items-center gap-2 mt-8 bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600">
+            Conoce Nuestra Academia
+          </a>
+        </div>
+
+        <div class="relative">
+          <img src="/assets/img/capacitaciones.jpg" alt="Imagen academia"
+            class="rounded-xl shadow w-full h-80 object-cover" />
+
+          <div class="absolute top-4 right-4 bg-white rounded-xl shadow px-4 py-2 flex items-center gap-2">
+            <img src="/assets/img/estrella-de-mar.png" alt="Icono" class="h-5" />
+            <span class="text-sm font-semibold">4.8 / 5</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white py-20">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <span data-i18n="process_badge" class="inline-block bg-blue-100 text-blue-700 text-xs px-4 py-1 rounded-full mb-4">
+        Tu Viaje Comienza Aquí
+      </span>
+
+      <h2 class="text-3xl font-bold mb-4" data-i18n="process_title">
+        El Proceso es Simple y <span class="text-blue-700" data-i18n="process_highlight">Transparente</span>
+      </h2>
+
+      <p class="text-gray-600 text-sm max-w-2xl mx-auto mb-16" data-i18n="process_desc">
+        Nuestro proceso es claro, seguro y transparente, diseñado para acompañarte en cada paso hacia tu oportunidad
+        laboral.
+      </p>
+
+      <div class="relative">
+        <div class="hidden md:block absolute top-10 left-0 right-0 h-1 bg-gray-200"></div>
+
+        <div class="grid md:grid-cols-4 gap-10 relative z-10">
+          <div class="flex flex-col items-center text-center">
+            <div class="relative">
+              <div class="w-20 h-20 bg-blue-800 text-white rounded-full flex items-center justify-center shadow-lg">
+                <img src="/assets/img/seguidor.png" alt="Icono" class="h-11" />
+              </div>
+              <span
+                class="absolute -top-2 -right-2 bg-yellow-500 text-white text-xs w-6 h-6 flex items-center justify-center rounded-full">
+                1
+              </span>
+            </div>
+            <h4 class="font-semibold mt-4" data-i18n="step1_title">Registro</h4>
+            <p class="text-xs text-gray-600 mt-2" data-i18n="step1_desc">
+              Completa tu información y aplica al programa que mejor se adapte a tu perfil.
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <div class="relative">
+              <div class="w-20 h-20 bg-yellow-500 text-white rounded-full flex items-center justify-center shadow-lg">
+                <img src="/assets/img/evaluacion-de-desempeno.png" alt="Icono" class="h-11" />
+              </div>
+              <span
+                class="absolute -top-2 -right-2 bg-blue-800 text-white text-xs w-6 h-6 flex items-center justify-center rounded-full">
+                2
+              </span>
+            </div>
+            <h4 class="font-semibold mt-4" data-i18n="step2_title">Evaluación</h4>
+            <p class="text-xs text-gray-600 mt-2" data-i18n="step2_desc">
+              Analizamos tu perfil, experiencia y requisitos para determinar tu elegibilidad.
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <div class="relative">
+              <div class="w-20 h-20 bg-green-500 text-white rounded-full flex items-center justify-center shadow-lg">
+                <img src="/assets/img/gorro-de-graduacion.png" alt="Icono" class="h-11" />
+              </div>
+              <span
+                class="absolute -top-2 -right-2 bg-blue-800 text-white text-xs w-6 h-6 flex items-center justify-center rounded-full">
+                3
+              </span>
+            </div>
+            <h4 class="font-semibold mt-4" data-i18n="step3_title">Preparación</h4>
+            <p class="text-xs text-gray-600 mt-2" data-i18n="step3_desc">
+              Recibes capacitación, orientación y acompañamiento antes de viajar.
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <div class="relative">
+              <div class="w-20 h-20 bg-orange-500 text-white rounded-full flex items-center justify-center shadow-lg">
+                <img src="/assets/img/avion.png" alt="Icono" class="h-11" />
+              </div>
+              <span
+                class="absolute -top-2 -right-2 bg-blue-800 text-white text-xs w-6 h-6 flex items-center justify-center rounded-full">
+                4
+              </span>
+            </div>
+            <h4 class="font-semibold mt-4" data-i18n="step4_title">¡A Trabajar!</h4>
+            <p class="text-xs text-gray-600 mt-2" data-i18n="step4_desc">
+              Inicias tu experiencia laboral de forma legal y segura.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-gray-100 py-16">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-8">
+      <div class="bg-gradient-to-r from-blue-900 to-blue-700 text-white p-10 rounded-2xl relative overflow-hidden">
+        <img src="/assets/img/usuario.png" alt="Icono" class="h-10 mb-4" />
+        <h3 class="text-2xl font-bold mb-3" data-i18n="worker_title">¿Eres Trabajador?</h3>
+        <p class="text-sm text-gray-200 mb-6" data-i18n="worker_desc">Accede a oportunidades laborales legales y seguras en el extranjero con
+          acompañamiento profesional.</p>
+        <a data-i18n="worker_button" href="/pages/trabajadoresForm.html"
+          class="inline-flex items-center gap-2 bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400">
+          Llenar formulario
+        </a>
+      </div>
+
+      <div class="bg-yellow-500 text-black p-10 rounded-2xl relative overflow-hidden">
+        <img src="/assets/img/edificios.png" alt="Icono" class="h-10 mb-4" />
+        <h3 class="text-2xl font-bold mb-3" data-i18n="employer_title">¿Eres Empleador?</h3>
+        <p class="text-sm mb-6" data-i18n="employer_desc">Conecta con talento capacitado y procesos confiables para cubrir tus vacantes.</p>
+        <a data-i18n="employer_button" href="/pages/empresasForm.html"
+          class="inline-flex items-center gap-2 bg-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-100">
+          Llenar formulario
+        </a>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-blue-950 text-gray-300 pt-16 pb-6">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-10">
+      <div>
+        <img src="/assets/img/logoTalento.png" alt="Logo" class="w-20 mb-4" />
+        <p data-i18n="footer_about" class="text-sm text-gray-400 mb-6">
+          Talento Sin Fronteras es una organización dedicada a conectar talento humano con oportunidades laborales
+          internacionales, promoviendo la migración segura, legal y digna.
+        </p>
+        <div class="flex gap-3">
+          <a href="https://www.facebook.com/people/Talento-Sin-Fronteras-GT/61564857662126/?mibextid=LQQJ4d&rdid=7lGNUdxzG825PBQk&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F7yz8hvFk1MbSXEbp%2F%3Fmibextid%3DLQQJ4d"
+            target="_blank"><img src="/assets/img/facebook.png" alt="Facebook" class="h-6" />
+            <a href="https://www.instagram.com/talentosinfronterasgt/?igsh=MWZ4eHIzOTAyazRxZw%3D%3D#"
+              target="_blank"><img src="/assets/img/instagram.png" alt="Instagram" class="h-6" />
+              <a href="mailto:info@talentosinfronterasgt.com" target="_blank"><img src="/assets/img/google.png"
+                  alt="Gmail" class="h-6" />
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-semibold mb-4" data-i18n="footer_services">Servicios</h4>
+        <ul class="space-y-2 text-sm">
+          <li class="hover:text-white" data-i18n="nav_academy">Academia TSF</li>
+          <li class="hover:text-white" data-i18n="card_legal_title">Asesoría Legal</li>
+          <li class="hover:text-white" data-i18n="card_allies_title">Red de Aliados</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-semibold mb-4" data-i18n="footer_for_you">Para Ti</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/pages/trabajadoresForm.html" class="hover:text-white" data-i18n="nav_workers">Para Trabajadores</a></li>
+          <li><a href="/pages/empresasForm.html" class="hover:text-white" data-i18n="nav_employers">Para Empresas</a></li>
+          <li><a href="#nosotros" class="hover:text-white" data-i18n="nav_why">¿Por qué nosotros?</a></li>
+          <li><a href="https://wa.me/50255705760" class="hover:text-white" data-i18n="footer_contact">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-semibold mb-4" data-i18n="footer_contact">Contacto</h4>
+        <ul class="space-y-2 text-sm">
+          <li>Ciudad de Guatemala</li>
+          <li>+502 5570-5760</li>
+          <li>info@talentosinfronterasgt.com</li>
+        </ul>
+
+        <a data-i18n="footer_contact" aria-flowto="" href="https://wa.me/50255705760"
+          class="inline-block mt-4 bg-yellow-500 text-black px-5 py-2 rounded-lg font-semibold hover:bg-yellow-400">
+          Contáctanos
+        </a>
+      </div>
+    </div>
+
+    <div data-i18n="footer_rights" class="border-t border-white/10 mt-10 pt-6 text-center text-xs text-gray-400">
+      © 2025 Talento Sin Fronteras. Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <script src="/assets/js/translation.js"></script>
+  <script src="/assets/js/lang.js" defer></script>
+
+</body>
+
+</html>
