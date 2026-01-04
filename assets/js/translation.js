@@ -71,7 +71,7 @@ window.TRANSLATIONS = {
     canada_desc:
       "Oportunidades laborales con contratos formales y estándares laborales internacionales.",
 
-    europe_title: "Europa (España, Polonia)",
+    europe_title: "Europa",
     europe_desc:
       "Programas de empleo en sectores agrícolas, industriales y de servicios.",
 
@@ -324,7 +324,7 @@ window.TRANSLATIONS = {
     canada_desc:
       "Job opportunities with formal contracts and international labor standards.",
 
-    europe_title: "Europe (Spain, Poland)",
+    europe_title: "Europe",
     europe_desc:
       "Employment programs in agricultural, industrial, and service sectors.",
 
