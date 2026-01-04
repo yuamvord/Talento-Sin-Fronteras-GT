@@ -25,11 +25,7 @@
     <header class="bg-white shadow">
       <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         <div class="flex items-center gap-2">
-          <img
-            src="/assets/img/tsfLogoMundo.png"
-            alt="Logo Talento Sin Fronteras"
-            class="h-20 w-auto"
-          />
+          <img src="/assets/img/logoTalento.png" alt="Logo Talento Sin Fronteras" class="h-20 w-auto bg-[#0c2752] rounded-xl" />
           <span class="font-bold text-lg">Talento Sin Fronteras</span>
         </div>
 
@@ -104,7 +100,7 @@
 
           <!-- FORM -->
           <form
-            action="https://submit.jotform.com/submit/XXXXXXXXXXXX/"
+            action="https://submit.jotform.com/submit/260036514609857/"
             method="POST"
             enctype="multipart/form-data"
             class="grid md:grid-cols-2 gap-6"
@@ -114,11 +110,11 @@
               Company Information
             </h3>
 
-            <input type="text" name="company_name" placeholder="Legal company name" required class="input" />
-            <input type="text" name="country" placeholder="Country" required class="input" />
-            <input type="text" name="region" placeholder="State / Province / Region" required class="input" />
+            <input type="text" name="q5_nombreLegal" placeholder="Legal company name" required class="input" />
+            <input type="text" name="q35_pais" placeholder="Country" required class="input" />
+            <input type="text" name="q36_estado" placeholder="State / Province / Region" required class="input" />
 
-            <select name="industry" required class="input">
+            <select name="q7_sectorO" required class="input">
               <option value="">Industry / Sector</option>
               <option>Agriculture</option>
               <option>Cleaning</option>
@@ -131,7 +127,7 @@
 
             <input
               type="url"
-              name="company_website"
+              name="q8_sitioWeb"
               placeholder="Company website or LinkedIn profile"
               required
               class="md:col-span-2 input"
@@ -142,12 +138,12 @@
               Contact Person
             </h3>
 
-            <input type="text" name="contact_name" placeholder="Full name" required class="input" />
-            <input type="text" name="job_title" placeholder="Job title / position" required class="input" />
-            <input type="email" name="email" placeholder="Corporate email address" required class="input" />
-            <input type="text" name="phone" placeholder="Phone number / WhatsApp" required class="input" />
+            <input type="text" name="q37_personaDe" placeholder="Full name" required class="input" />
+            <input type="text" name="q38_puesto" placeholder="Job title / position" required class="input" />
+            <input type="email" name="q39_correoCorporativo" placeholder="Corporate email address" required class="input" />
+            <input type="text" name="q41_numeroTelefonico" placeholder="Phone number / WhatsApp" required class="input" />
 
-            <select name="preferred_language" required class="input">
+            <select name="q9_lenguajePreferido" required class="input">
               <option value="">Preferred language</option>
               <option>English</option>
               <option>Spanish</option>
@@ -159,7 +155,7 @@
               Workforce Needs
             </h3>
 
-            <select name="worker_type" required class="input">
+            <select name="q11_tipoDe" required class="input">
               <option value="">Type of workers needed</option>
               <option>Agriculture</option>
               <option>Cleaning</option>
@@ -170,11 +166,11 @@
               <option>Other</option>
             </select>
 
-            <input type="number" name="worker_quantity" placeholder="Number of workers required (estimate)" required class="input" />
-            <input type="text" name="work_country" placeholder="Country where the work will take place" required class="input" />
-            <input type="date" name="start_date" required class="input" />
+            <input type="number" name="q43_numeroDe" placeholder="Number of workers required (estimate)" required class="input" />
+            <input type="text" name="q42_paisDel" placeholder="Country where the work will take place" required class="input" />
+            <input type="date" name="q43_fecha" required class="input" />
 
-            <select name="contract_duration" required class="input">
+            <select name="q12_duracionDel" required class="input">
               <option value="">Contract duration</option>
               <option>Weeks</option>
               <option>Months</option>
@@ -185,13 +181,13 @@
               Hiring & Legal Status
             </h3>
 
-            <select name="foreign_workers_before" required class="input">
+            <select name="q13_historialDe" required class="input">
               <option value="">Have you hired foreign workers before?</option>
               <option>Yes</option>
               <option>No</option>
             </select>
 
-            <select name="legal_status" required class="md:col-span-2 input">
+            <select name="q49_typeA" required class="md:col-span-2 input">
               <option value="">Current hiring or legal process status</option>
               <option>We already have a work permit / visa / LMIA</option>
               <option>We are starting the process</option>
@@ -207,14 +203,14 @@
             </div>
 
             <!-- TRAINING -->
-            <select name="training_required" required class="input">
+            <select name="q14_serviciosDe" required class="input">
               <option value="">Would you require training services?</option>
               <option>Yes</option>
               <option>No</option>
               <option>Not sure yet</option>
             </select>
 
-            <select name="language_training" class="input">
+            <select name="q15_formacionEn" class="input">
               <option value="">Language training needed</option>
               <option>English</option>
               <option>French</option>
@@ -223,7 +219,7 @@
             </select>
 
             <textarea
-              name="additional_requirements"
+              name="q45_requisitosAdicionales"
               rows="4"
               class="md:col-span-2 input"
               placeholder="Additional training or language requirements (optional)"
@@ -234,12 +230,12 @@
               Documents
             </h3>
 
-            <input type="file" name="job_description" required class="md:col-span-2 input" />
-            <input type="file" name="optional_documents" multiple class="md:col-span-2 input" />
+            <input type="file" name="q46_documentos" required class="md:col-span-2 input" />
+            <input type="file" name="q47_documentos2" multiple class="md:col-span-2 input" />
 
             <!-- COMMENTS -->
             <textarea
-              name="comments"
+              name="q48_comentariosAdicionales"
               rows="4"
               class="md:col-span-2 input"
               placeholder="Additional comments or information (optional)"

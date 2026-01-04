@@ -41,9 +41,9 @@ window.TRANSLATIONS = {
     why_free_text:
       "Nuestros programas no generan cobros indebidos ni intermediarios informales.",
 
-    why_academy_title: "Academia de Idiomas",
+    why_academy_title: "Academia TSF GT",
     why_academy_text:
-      "Capacitación práctica enfocada en el idioma requerido para el trabajo y la vida diaria.",
+      "capacitación práctica enfocada en el idioma/profesión requerido para el trabajo y la vida diaria.",
 
     why_legal_title: "Asesoría Legal",
     why_legal_text:
@@ -294,9 +294,9 @@ window.TRANSLATIONS = {
     why_free_text:
       "Our programs do not involve improper fees or informal intermediaries.",
 
-    why_academy_title: "Language Academy",
+    why_academy_title: "Academy TSF GT",
     why_academy_text:
-      "Practical training focused on the language required for work and daily life.",
+      "Practical training focused on the language/profession required for work and daily life.",
 
     why_legal_title: "Legal Advisory",
     why_legal_text:
