@@ -2,6 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Academia TSF | Certificación Internacional</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -128,6 +129,7 @@
           src="/assets/img/academia-hero.jpg"
           alt="Academia TSF"
           class="rounded-xl shadow-lg"
+          data-aos="fade-up" data-aos-duration="1000"
         />
       </div>
     </section>
@@ -141,6 +143,7 @@
           src="/assets/img/empleadores.jpg"
           class="rounded-xl shadow-lg"
           alt="Empleadores"
+          data-aos="fade-up" data-aos-duration="1000"
         />
 
         <div>
@@ -236,6 +239,7 @@
           src="/assets/img/trabajadores.jpg"
           class="rounded-xl shadow-lg"
           alt="Trabajadores"
+          data-aos="fade-up" data-aos-duration="1000"
         />
       </div>
     </section>
@@ -252,7 +256,7 @@
 
         <div class="space-y-4">
           <!-- PROGRAMA -->
-          <details class="bg-white rounded-xl shadow p-6">
+          <details class="bg-white rounded-xl shadow p-6" data-aos="fade-right">
             <summary
               class="font-semibold text-lg cursor-pointer"
               data-i18n="prog_lang_title"
@@ -273,7 +277,7 @@
             </a>
           </details>
 
-          <details class="bg-white rounded-xl shadow p-6">
+          <details class="bg-white rounded-xl shadow p-6" data-aos="fade-right" data-aos-delay="100">
             <summary
               data-i18n="prog_const_title"
               class="font-semibold text-lg cursor-pointer"
@@ -293,7 +297,7 @@
             </a>
           </details>
 
-          <details class="bg-white rounded-xl shadow p-6">
+          <details class="bg-white rounded-xl shadow p-6" data-aos="fade-right" data-aos-delay="200">
             <summary
               class="font-semibold text-lg cursor-pointer"
               data-i18n="prog_ind_title"
@@ -313,7 +317,7 @@
             </a>
           </details>
 
-          <details class="bg-white rounded-xl shadow p-6">
+          <details class="bg-white rounded-xl shadow p-6" data-aos="fade-right" data-aos-delay="300">
             <summary
               class="font-semibold text-lg cursor-pointer"
               data-i18n="prog_food_title"
@@ -333,7 +337,7 @@
             </a>
           </details>
 
-          <details class="bg-white rounded-xl shadow p-6">
+          <details class="bg-white rounded-xl shadow p-6" data-aos="fade-right" data-aos-delay="400">
             <summary
               class="font-semibold text-lg cursor-pointer"
               data-i18n="prog_hotel_title"
@@ -353,7 +357,7 @@
             </a>
           </details>
 
-          <details class="bg-white rounded-xl shadow p-6">
+          <details class="bg-white rounded-xl shadow p-6" data-aos="fade-right" data-aos-delay="500">
             <summary
               class="font-semibold text-lg cursor-pointer"
               data-i18n="prog_agri_title"
@@ -373,7 +377,7 @@
             </a>
           </details>
 
-          <details class="bg-white rounded-xl shadow p-6">
+          <details class="bg-white rounded-xl shadow p-6" data-aos="fade-right" data-aos-delay="600">
             <summary
               class="font-semibold text-lg cursor-pointer"
               data-i18n="prog_safety_title"
@@ -393,7 +397,7 @@
             </a>
           </details>
 
-          <details class="bg-white rounded-xl shadow p-6">
+          <details class="bg-white rounded-xl shadow p-6" data-aos="fade-right" data-aos-delay="700">
             <summary
               class="font-semibold text-lg cursor-pointer"
               data-i18n="prog_super_title"
@@ -429,5 +433,10 @@
 
     <script src="../assets/js/translation.js"></script>
     <script src="../assets/js/lang.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init();
+</script>
   </body>
 </html>
